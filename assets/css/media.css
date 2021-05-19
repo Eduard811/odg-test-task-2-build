@@ -1,0 +1,68 @@
+@media screen and (max-width: 1143px) {
+  .b-popup__wrapper {
+    width: 453px; } }
+
+@media screen and (max-width: 767px) {
+  .b-button {
+    font-family: "Lab Grotesque", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 12px 24px; }
+  .b-popup {
+    padding: 0; }
+    .b-popup__wrapper {
+      border-radius: unset;
+      width: 100%;
+      min-height: 100vh;
+      padding: 32px 16px 90px 16px;
+      min-width: 320px; }
+    .b-popup__title {
+      font-family: "Lab Grotesque", sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px; }
+    .b-popup__description {
+      font-family: "Lab Grotesque", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px; }
+    .b-popup__close {
+      width: 24px;
+      height: 24px; }
+      .b-popup__close svg {
+        max-height: 24px;
+        max-width: 24px;
+        min-width: 24px;
+        min-height: 24px; }
+  .b-field__dialog {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .b-field__dialog__question {
+      font-family: "Lab Grotesque", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-right: unset; }
+    .b-field__dialog__btn-wrap {
+      margin-top: 24px; }
+  .b-field__input:hover {
+    border: 1px solid #dfe3e6; }
+  .b-field__submit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    margin-top: unset;
+    background-color: #ffffff; }
+  .b-tag {
+    margin-right: 8px; } }

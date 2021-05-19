@@ -1,0 +1,582 @@
+@charset "UTF-8";
+/* Reset (default browsers styles erasing) */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Reset (default browsers styles erasing) */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+*:focus {
+  outline: 0; }
+
+/* Remove list styles and paddings on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth; }
+
+/* Fonts (including not standart fonts) */
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url("../fonts/LabGrotesque/LabGrotesque-Regular.eot");
+  src: local("../fonts/LabGrotesque/Lab Grotesque Regular"), local("../fonts/LabGrotesque/LabGrotesque-Regular"), url("../fonts/LabGrotesque/LabGrotesque-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/LabGrotesque/LabGrotesque-Regular.woff2") format("woff2"), url("LabGrotesque-Regular.woff") format("woff"), url("../fonts/LabGrotesque/LabGrotesque-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url("../fonts/LabGrotesque/LabGrotesque-Medium.eot");
+  src: local("../fonts/LabGrotesque/Lab Grotesque Medium"), local("../fonts/LabGrotesque/LabGrotesque-Medium"), url("../fonts/LabGrotesque/LabGrotesque-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/LabGrotesque/LabGrotesque-Medium.woff2") format("woff2"), url("LabGrotesque-Medium.woff") format("woff"), url("../fonts/LabGrotesque/LabGrotesque-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+/* Overrides extra padding in Firefox */
+/* Overrides extra padding in Firefox */
+button::-moz-focus-inner {
+  padding: 0;
+  border: none; }
+
+input[type='number'] {
+  -moz-appearance: textfield; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; }
+
+input, button {
+  -webkit-appearance: none; }
+
+*:invalid {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0; }
+
+*:-moz-submit-invalid {
+  box-shadow: none;
+  border: 0; }
+
+*:-moz-ui-invalid {
+  box-shadow: none;
+  border: 0; }
+
+/* Variables */
+/* Common (common styles) */
+/* Common (common styles) */
+body,
+input,
+textarea,
+select,
+button {
+  font-family: "Lab Grotesque", sans-serif;
+  font-weight: 400;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  color: #000000;
+  font-size: 14px;
+  line-height: 24px; }
+
+/* Layout / prefix — l- */
+/* Layout / prefix — l- */
+.l-outer {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+/* Basic (basic blocks, which are the basis) / prefix — b- */
+.b-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: linear-gradient(255.35deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #ff5e56;
+  -webkit-box-shadow: 0px -0.11px 16.9495px rgba(183, 187, 225, 0.33);
+  box-shadow: 0px -0.11px 16.9495px rgba(183, 187, 225, 0.33); }
+  .b-main__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.b-button {
+  font-family: "Lab Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #ffffff;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in; }
+  .b-button_outline {
+    border: 1px solid #ffffff;
+    background-color: transparent; }
+    .b-button_outline:hover {
+      color: #000000;
+      background-color: #ffffff; }
+    .b-button_outline_disabled {
+      color: white;
+      background-color: #bec5cc;
+      cursor: auto; }
+      .b-button_outline_disabled:hover {
+        color: white;
+        background-color: #bec5cc; }
+  .b-button_contained {
+    width: 100%;
+    border: none;
+    background: linear-gradient(255.35deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #ff5e56;
+    -webkit-box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+    box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33); }
+    .b-button_contained:hover {
+      background: #ea0029;
+      -webkit-transition: all 0s ease-in;
+      transition: all 0s ease-in; }
+    .b-button_contained_disabled {
+      background: #bec5cc;
+      background-color: #bec5cc;
+      cursor: auto;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+      .b-button_contained_disabled:hover {
+        background-color: #bec5cc; }
+
+.b-popup {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+  z-index: 100;
+  width: 100%;
+  position: fixed;
+  min-height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
+  padding: 120px 0; }
+  .b-popup__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    width: 552px;
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    position: relative; }
+  .b-popup__close {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none; }
+    .b-popup__close svg {
+      min-width: 40px;
+      min-height: 40px; }
+  .b-popup__title {
+    font-family: "Lab Grotesque", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #000000; }
+  .b-popup__description {
+    font-family: "Lab Grotesque", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #808080;
+    margin-top: 16px; }
+  .b-popup__form {
+    margin-top: 24px; }
+  .b-popup_active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 0.1s ease;
+    transition: opacity 0.1s ease; }
+
+.b-field {
+  width: 100%; }
+  .b-field__label {
+    font-family: "Lab Grotesque", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    font-weight: 500;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #000000;
+    margin-bottom: 8px; }
+  .b-field__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    position: relative; }
+  .b-field__input {
+    font-family: "Lab Grotesque", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #000000;
+    border-radius: 3px;
+    padding: 7px 10px;
+    border: 1px solid #dfe3e6;
+    caret-color: #808080;
+    -webkit-transition: border 0.1s ease;
+    transition: border 0.1s ease; }
+    .b-field__input:hover {
+      border: 1px solid #000000; }
+    .b-field__input:focus {
+      border: 1px solid #dfe3e6; }
+    .b-field__input:disabled {
+      cursor: no-drop;
+      background-color: #ffffff;
+      border: 1px solid #808080; }
+      .b-field__input:disabled::-webkit-input-placeholder {
+        color: #808080; }
+      .b-field__input:disabled::-moz-placeholder {
+        color: #808080; }
+      .b-field__input:disabled:-ms-input-placeholder {
+        color: #808080; }
+      .b-field__input:disabled::-ms-input-placeholder {
+        color: #808080; }
+      .b-field__input:disabled::placeholder {
+        color: #808080; }
+    .b-field__input::-webkit-input-placeholder {
+      color: #dfe3e6; }
+    .b-field__input::-moz-placeholder {
+      color: #dfe3e6; }
+    .b-field__input:-ms-input-placeholder {
+      color: #dfe3e6; }
+    .b-field__input::-ms-input-placeholder {
+      color: #dfe3e6; }
+    .b-field__input::placeholder {
+      color: #dfe3e6; }
+    .b-field__input_error {
+      border: 1px solid #ea0029; }
+  .b-field__description {
+    font-family: "Lab Grotesque", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    display: none; }
+    .b-field__description_error {
+      display: block;
+      color: #ea0029;
+      margin-top: 4px; }
+  .b-field__button {
+    font-family: "Lab Grotesque", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    font-weight: 500;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #ea0029;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    -webkit-transition: color 0.1s ease;
+    transition: color 0.1s ease;
+    margin-top: 8px; }
+    .b-field__button:hover {
+      color: #f53a31; }
+    .b-field__button:active {
+      color: #ea0029; }
+  .b-field__dialog {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 24px; }
+    .b-field__dialog__question {
+      font-family: "Lab Grotesque", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      font-weight: 500;
+      color: #000000;
+      margin-right: 32px; }
+    .b-field__dialog__btn-wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  .b-field__block-two {
+    display: none;
+    margin-top: 16px; }
+    .b-field__block-two_active {
+      display: block; }
+  .b-field__total {
+    font-family: "Lab Grotesque", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    font-weight: 500;
+    color: #000000; }
+  .b-field__checkbox-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #dfe3e6; }
+  .b-field__checkbox {
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url(../i/svg/Checkbox_normal.svg);
+    margin: unset;
+    margin-right: 11px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    border: none; }
+    .b-field__checkbox:hover {
+      background-image: url(../i/svg/Checkbox_hover.svg);
+      -webkit-transition: all 0.1s ease;
+      transition: all 0.1s ease;
+      background-repeat: no-repeat; }
+    .b-field__checkbox:checked {
+      background-image: url(../i/svg/Checkbox_click.svg);
+      background-repeat: no-repeat; }
+    .b-field__checkbox:disabled {
+      background-image: url(../i/svg/Checkbox_disabled.svg);
+      background-repeat: no-repeat;
+      cursor: auto; }
+  .b-field__checkbox-label {
+    font-family: "Lab Grotesque", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #000000;
+    cursor: pointer; }
+    .b-field__checkbox-label span {
+      color: #808080; }
+  .b-field__submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 40px; }
+
+.b-tag {
+  font-family: "Lab Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #000000;
+  padding: 6px 12px;
+  background: #eef0f2;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin-right: 16px;
+  -webkit-transition: background-color 0.1s ease;
+  transition: background-color 0.1s ease; }
+  .b-tag:last-child {
+    margin-right: unset; }
+  .b-tag:hover {
+    background: #dfe3e6; }
+  .b-tag_active {
+    background: linear-gradient(255.35deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #ff5e56;
+    color: #ffffff; }
+    .b-tag_active:hover {
+      background: linear-gradient(255.35deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #ff5e56; }
